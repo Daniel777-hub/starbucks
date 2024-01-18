@@ -1,0 +1,1 @@
+let imgCopo = document.querySelector(".starbucks")
