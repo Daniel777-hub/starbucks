@@ -35,6 +35,14 @@ body {
     justify-content: center;
 }
 
+button {
+    background-color: #017143; /* cor de fundo */
+    color: #ffffff; /* cor do texto */
+    border: none; /* borda */
+    padding: 10px;
+    border-radius: 20px;
+}
+
 h2 {
     font-size: 60px;
     font-weight: 500;
