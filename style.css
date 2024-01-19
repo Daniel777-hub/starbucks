@@ -9,7 +9,14 @@ body {
     padding-top: 20px;
     padding-right: 100px;
     padding-left: 100px;
-    
+}
+
+@media (max-width: 280px) {
+    body {
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
 }
 
 .conteudo {
@@ -17,6 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; 
 }
 
 .caixa-texto {
@@ -36,11 +44,34 @@ body {
 }
 
 button {
-    background-color: #017143; /* cor de fundo */
-    color: #ffffff; /* cor do texto */
-    border: none; /* borda */
+    background-color: #017143;
+    color: #ffffff;
+    border: none;
     padding: 10px;
     border-radius: 20px;
+    transition: background-color 0.5s, transform 0.5s; 
+}
+
+button:hover {
+    background-color: #014d2e;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #01291a;
+    transform: scale(0.9);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 h2 {
@@ -62,15 +93,34 @@ p {
 
 .logo {
     width: 80px;
+    cursor: pointer; 
 }
 
 .starbucks {
     width: 340px;
     z-index: 2;
+    transition: transform 0.5s; 
+}
+
+.starbucks:hover {
+    transform: scale(1.1); 
+}
+
+.starbucks:active {
+    transform: scale(0.9); 
 }
 
 .copo-pequeno {
     width: 60px;
+    transition: transform 0.5s; 
+}
+
+.copo-pequeno:hover {
+    transform: scale(1.1); 
+}
+
+.copo-pequeno:active {
+    transform: scale(0.9); 
 }
 
 .circulo {
@@ -81,4 +131,29 @@ p {
     top: 0;
     left: 0;
     clip-path: circle(600px at right 800px);
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark .circulo {
+    background-color: #017143;
+}
+
+body.dark span {
+    color: #017143;
+}
+
+body.dark button {
+    background-color: #017143;
+}
+
+body.dark button:hover {
+    background-color: #014d2e; 
+}
+
+body.dark button:active {
+    background-color: #01291a; 
 }
